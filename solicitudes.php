@@ -1,6 +1,6 @@
   <?php 
   include ("conexion.php");
-  $usuarios="SELECT * FROM tb_usuarios";
+  $solicitudes="SELECT * FROM tb_solicitud";
   
   ?>
 
@@ -17,8 +17,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
-    
-
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
     
@@ -29,7 +27,7 @@
  
 
 
-<?php require 'complementos/header.php'; ?>
+<?php require 'complementos/header.php';?>
 
 <div class="container-fluid">
   <div class="row">
@@ -38,7 +36,7 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h1 class="h2">Bandeja de peticiones</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <a href="registrar.php" class="btn btn-sm btn-success">Agregar usuario</a>
@@ -54,31 +52,45 @@
 
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
-      <h2>Usuarios registrados</h2>
+      <h2>Jenifer Santos Zamudio</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Usuario</th>
-              <th scope="col">Email</th>
-              <th scope="col">Oficina</th>
-              <th scope ="col">Acciones<th/>
+              <th scope="col">Nombre</th>
+              <th scope="col">fecha</th>
+              <th scope="col">Descripcion</th>
+              <th scope ="col">fecha de Solicitud</th>
+              <th scope ="col">tipo de solicitud</th>
+              <th scope ="col">Nombre a quien solicita</th>
+              <th scope ="col">Oficina</th>
+              <th scope ="col">Comentarios</th>
+              <th scope ="col">Aprobada</th>
+
+
             </tr>
           </thead>
           <tbody>
 
-           <?php  $resultado = mysqli_query($conexion, $usuarios);
+           <?php  $resultado = mysqli_query($conexion, $solicitudes);
 
            while ($row=mysqli_fetch_assoc($resultado)) { ?>
             <tr>
-              <td><?php echo $row['id_usuario']; ?></td>
+              <td><?php echo $row['id']; ?></td>
               <td><?php echo $row['nombre']; ?></td>
-              <td><?php echo $row['email']; ?></td>
+              <td><?php echo $row['fecha']; ?></td>
+              <td><?php echo $row['descripcion']; ?></td>
+              <td><?php echo $row['fecha_solicitud']; ?></td>
+              <td><?php echo $row['tipo_solicitud']; ?></td>
+              <td><?php echo $row['nomb_solicita']; ?></td>
               <td><?php echo $row['oficina']; ?></td>
+              <td><?php echo $row['comentarios']; ?></td>
+              <td><?php echo $row['aprobada']; ?></td>
+
                 <td>
-                  <a href="editarUsuario.php?id=<?php echo $row['id_usuario'];?>">Editar</a>
-                  <a href="eliminar.php?id=<?php echo $row['id_usuario'];?>" class="item-delete">Eliminar</a>
+                  <a href="editarUsuario.php?id=<?php echo $row['id'];?>">Editar</a>
+                  <a href="eliminar.php?id=<?php echo $row['id'];?>" class="item-delete">Eliminar</a>
                 </td>
             </tr>
 
