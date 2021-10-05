@@ -1,0 +1,486 @@
+// GENERALES
+$background-gradient: linear-gradient(50deg, steelblue, steelblue, steelblue, red 60%, yellow);
+$azul-obscuro-paco: #162d4c;
+$rojo-paco: #c11631;
+$amarillo-paco: #ffdd0e;
+$azul-claro: #04498e;
+
+// @font-face {
+//     font-family: Expo2;
+//     src: url(../fuente/);
+// }
+
+*{
+    font-family: Expo2
+}
+
+body {
+    padding-top: 0 !important;
+    background: $azul-claro !important;
+    background-image: url(../img/Sin-título-1.jpg) !important;
+    background-size: 50% !important;
+    background-attachment: fixed !important;
+}
+
+main,
+footer {
+    background: rgb(247, 247, 247);
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 140px;
+}
+
+.navbar {
+    margin-bottom: 0 !important;
+}
+
+.nav-link:hover {
+    text-decoration: underline 4px steelblue;
+    // padding-bottom: 2px;
+}
+
+.active-first {
+    background: $background-gradient !important;
+}
+
+// HEADER
+.nav-link .active-first.active {
+    background: $background-gradient !important;
+}
+
+// COLORES
+.gradient {
+    background: url(../img/barra-mosaico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .container-fluid {
+        .navbar-nav {
+            li a {
+                color: #fff !important;
+                padding: 8px 20px;
+
+                &:hover {
+                    text-decoration: underline 2px;
+                    // border: 1px solid #fff;
+                    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.5);
+                }
+
+                &.submenu-active {
+                    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.5);
+
+                }
+            }
+        }
+    }
+}
+
+.bg-blue-dark {
+    border: 2px solid $azul-obscuro-paco !important;
+}
+
+.border-amarillo {
+    border: 2px solid $amarillo-paco !important;
+}
+
+.border-blue {
+    border: 2px solid $azul-claro !important;
+}
+
+.border-rojo {
+    border: 2px solid $rojo-paco !important;
+}
+
+.bg-dark {
+    background: none !important;
+}
+
+
+.bg-amarillo {
+    background: $amarillo-paco!important;
+}
+
+.bg-rojo {
+    background: $rojo-paco!important;
+}
+
+.bg-azul {
+    background: $azul-claro!important;
+}
+
+.bg-azul-obscuro {
+    background: $azul-obscuro-paco!important;
+}
+
+.color-amarillo {
+    color: $amarillo-paco!important;
+
+}
+
+.color-rojo {
+    color: $rojo-paco!important;
+
+}
+
+.color-azul {
+    color: $azul-claro!important;
+
+}
+
+.color-azul-obscuro {
+    color: $azul-obscuro-paco!important;
+
+}
+
+.border-none {
+    border: none !important;
+}
+
+// BANNER
+.banner-gral {
+    height: 300px !important;
+    background: url(../img/oficina2.jpeg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    &::after {
+        content: "";
+        background: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100%;
+    }
+
+}
+
+.banner-quienes {
+
+    height: 300px !important;
+    background: url(../img/soypacosantos.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    &::after {
+        content: "";
+        background: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100%;
+    }
+
+}
+.banner-fideicomiso {
+
+    height: 300px !important;
+    background: url(../img/fondosoypacosantos.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    &::after {
+        content: "";
+        background: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100%;
+    }
+
+}
+
+.background-paco {
+    background-image: url(../img/index-header-paco.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 100%;
+}
+
+@media screen and(max-width: 600px) {
+    .background-paco {
+        background-image: none;
+    }
+}
+
+.texto-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+        font-weight: 900;
+        font-size: 4rem !important;
+        color: #fff;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-size: 2.3rem !important;
+        color: #fff;
+    }
+
+}
+
+@media screen and(max-width:500px) {
+
+    .texto-banner h1, .texto-banner h2 {
+        font-size: 26px!important;
+    }
+}
+
+.carousel-prueb {
+
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../img/arranque_paco.mp4) !important;
+    background-size: cover !important;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 76, 148, 0.507) 90% 45deg);
+    }
+}
+
+@media screen and(max-width:1090px) {
+    .carousel-prueb {
+        height: auto !important;
+    }
+}
+
+
+// carousel fideicomiso
+
+
+.testimonials {
+    // background-color: $azul-obscuro-paco;
+    position: relative;
+    padding-top: 80px;
+}
+
+.testimonials:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 30%;
+    // background-color: $azul-obscuro-paco;
+}
+
+#customers-testimonials .item-details {
+    background-color: $azul-obscuro-paco;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: left;
+    height: 130px;
+
+}
+
+#customers-testimonials .item-details h5 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+#customers-testimonials .item-details h5 span {
+    color: red;
+    float: right;
+    padding-right: 20px;
+}
+
+#customers-testimonials .item-details p {
+    font-size: 14px;
+}
+
+#customers-testimonials .item {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.owl-carousel .owl-nav [class*=owl-] {
+    transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-nav [class*=owl-].disabled:hover {
+    background-color: #D6D6D6;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    font-size: 20px;
+    color: $azul-claro;
+    border: 1px solid $azul-claro;
+    text-align: center;
+}
+
+.owl-carousel .owl-prev {
+    left: -50px;
+}
+
+.owl-carousel .owl-next {
+    right: -50px;
+}
+
+//   SLIDE IMG
+
+// IMAGEN DE INDEX PACO
+.bg-soypaco {
+    background: url(../img/soypaco-banner.jpg);
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+@media screen and(max-width: 600px) {
+    .bg-soypaco {
+        background: rgba(255, 255, 255, 0.5) url(/img/soypaco-banner.jpg) no-repeat 50%;
+    }
+}
+
+.bg-blanco {
+    background: #fff !important;
+}
+
+.color-blue {
+    color: #04498e;
+}
+
+.hb-1,
+.bg-2,
+.bg-3,
+.bg-4 {
+    transition: .1s ease-in;
+    -webkit-transition: .1s ease-in;
+    -o-transition: .1s ease-in;
+}
+
+.bg-1:hover {
+    background: $amarillo-paco !important;
+    transition: .1s ease-in;
+    -webkit-transition: .1s ease-in;
+    -o-transition: .1s ease-in;
+}
+
+.bg-2:hover {
+    background: $rojo-paco !important;
+    color: #fff !important;
+    transition: .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+}
+
+.bg-3:hover {
+    background: $azul-claro !important;
+    color: #fff !important;
+    transition: .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+}
+
+.bg-4:hover {
+    background: $azul-obscuro-paco !important;
+    color: #fff !important;
+    transition: .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+}
+
+.lista-redes-sociales {
+    list-style: none;
+
+    li {
+        i {
+            font-size: 30px;
+            margin: 10px 30px;
+
+        }
+
+        &:hover {
+            margin-top: -8px;
+            transition: .1s ease-in;
+            -webkit-transition: .1s ease-in;
+            -o-transition: .1s ease-in;
+        }
+
+        transition: .1s ease-in;
+        -webkit-transition: .1s ease-in;
+        -o-transition: .1s ease-in;
+    }
+}
+
+.flex-end {
+    display: flex;
+    align-items: flex-end !important;
+}
+
+.lista-footer {
+    list-style: none;
+
+    li {
+
+        transition: .1s ease-in;
+        -webkit-transition: .1s ease-in;
+        -o-transition: .1s ease-in;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        &:hover {
+            border-left: 3px solid $azul-claro;
+            padding-left: 10px;
+            transition: .1s ease-in;
+            -webkit-transition: .1s ease-in;
+            -o-transition: .1s ease-in;
+        }
+    }
+}
+
+.contacto-footer {
+    p {
+        a {
+            transition: .1s ease-in;
+            -webkit-transition: .1s ease-in;
+            -o-transition: .1s ease-in;
+            text-decoration: none;
+            color: #343a40;
+
+            &:hover {
+                border-left: 3px solid $azul-claro;
+                padding-left: 10px;
+                transition: .1s ease-in;
+                -webkit-transition: .1s ease-in;
+                -o-transition: .1s ease-in;
+            }
+        }
+
+    }
+}
+.icon-list{
+    list-style: none;
+}
